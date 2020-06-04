@@ -70,8 +70,8 @@ properties([[$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'h
 properties([parameters([booleanParam(defaultValue: true, description: '', name: 'username'), choice(choices: ['red', 'blue', 'green'], description: '', name: 'colours'), file(description: '', name: '/var/lib/1.txt'), string(defaultValue: 'master', description: '', name: 'branch', trim: true), password(defaultValue: 'Sujith@12345', description: '', name: 'password'), run(description: '', filter: 'ALL', name: 'pipeline', projectName: 'pipeline1')])])
 ```
 6. Throttle builds:
-
-```properties([rateLimitBuilds([count: 1, durationName: 'day', userBoost: false])])
+```
+properties([rateLimitBuilds([count: 1, durationName: 'day', userBoost: false])])
 ```
 7. Build after other projects are built
 ```
